@@ -41,3 +41,6 @@ GitHub & CI
 - A simple GitHub Actions workflow is included at `.github/workflows/ci.yml`. It installs `tidy` and runs `tidy -q -e index.html` to validate HTML on each push.
 
 Enjoy exploring the project — if you want more features (image gallery, lightbox, or deploy to GitHub Pages), say the word and I'll implement it.
+
+Repository: 
+Site: 
