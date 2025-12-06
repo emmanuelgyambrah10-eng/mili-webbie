@@ -42,5 +42,5 @@ GitHub & CI
 
 Enjoy exploring the project — if you want more features (image gallery, lightbox, or deploy to GitHub Pages), say the word and I'll implement it.
 
-Repository: 
-Site: 
+Repository: https://github.com/emmanuelgyambrah10-eng/mili-webbie
+Site: https://emmanuelgyambrah10-eng.github.io/mili-webbie/
