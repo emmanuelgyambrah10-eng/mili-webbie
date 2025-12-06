@@ -2,7 +2,9 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 header {
@@ -36,6 +38,8 @@ nav ul li a {
 
 main {
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 footer {
@@ -45,28 +49,33 @@ footer {
   padding: 10px;
 }
 
-/* Greet button and message styles */
+/* Greet button and message styles - Glassmorphism */
 #greetBtn {
-  background: #0066cc;
+  background: rgba(255, 255, 255, 0.15);
   color: #fff;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px 16px;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-weight: 600;
 }
 
 #greetBtn:hover {
-  background: #005bb5;
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 #greetBtn:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0,102,204,0.22);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 0 0 3px rgba(255,255,255,0.3);
 }
 
 #greetBtn {
-  transition: background 180ms ease, transform 120ms ease, box-shadow 120ms ease;
+  transition: background 180ms ease, transform 120ms ease, box-shadow 120ms ease, border-color 180ms ease;
 }
 
 #greetBtn:active {
@@ -76,10 +85,17 @@ footer {
 #message {
   margin-top: 12px;
   font-weight: 700;
-  color: #222;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
 }
 
-/* Gallery styles */
+/* Gallery styles - Glassmorphism */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -88,11 +104,22 @@ footer {
 }
 
 .gallery-item {
-  background: #fff;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
   padding: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  transition: all 200ms ease;
+}
+
+.gallery-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  transform: translateY(-4px);
 }
 
 .gallery-item img {
@@ -102,9 +129,14 @@ footer {
   display: block;
   margin: 0 auto 8px auto;
   cursor: zoom-in;
+  transition: transform 200ms ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
 }
 
 .gallery-item figcaption {
   font-size: 13px;
-  color: #555;
+  color: rgba(255, 255, 255, 0.8);
 }
