@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tidy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tidy
+      - name: Validate index.html with tidy
+        run: |
+          tidy -q -e index.html

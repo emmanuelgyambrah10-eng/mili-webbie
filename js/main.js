@@ -16,4 +16,15 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log('Greeted:', name);
     });
   }
+
+  // Gallery click: open image in new tab when clicked
+  const gallery = document.querySelector('.gallery-grid');
+  if (gallery) {
+    gallery.addEventListener('click', (e) => {
+      const img = e.target.closest('img');
+      if (img) {
+        window.open(img.src, '_blank');
+      }
+    });
+  }
 });

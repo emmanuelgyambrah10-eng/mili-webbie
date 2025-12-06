@@ -60,8 +60,51 @@ footer {
   background: #005bb5;
 }
 
+#greetBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,102,204,0.22);
+}
+
+#greetBtn {
+  transition: background 180ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+
+#greetBtn:active {
+  transform: translateY(1px);
+}
+
 #message {
   margin-top: 12px;
   font-weight: 700;
   color: #222;
+}
+
+/* Gallery styles */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto 8px auto;
+  cursor: zoom-in;
+}
+
+.gallery-item figcaption {
+  font-size: 13px;
+  color: #555;
 }

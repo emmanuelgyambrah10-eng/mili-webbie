@@ -35,3 +35,9 @@ About the Greet button
 - `index.html` includes a small interactive button (top of main). Click "Greet" to enter your name; the page will display a friendly greeting using `js/main.js`.
 
 If you'd like any further reorganization (move other assets, add a `js/` folder, or initialize a git repo), tell me and I can do it.
+
+GitHub & CI
+- To publish this repo on GitHub, create a repository and push as described in `CONTRIBUTING.md`.
+- A simple GitHub Actions workflow is included at `.github/workflows/ci.yml`. It installs `tidy` and runs `tidy -q -e index.html` to validate HTML on each push.
+
+Enjoy exploring the project — if you want more features (image gallery, lightbox, or deploy to GitHub Pages), say the word and I'll implement it.
