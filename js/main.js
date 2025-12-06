@@ -4,4 +4,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const el = document.createElement('p');
   el.textContent = "This page is powered by a small starter script (js/main.js).";
   document.querySelector('main').appendChild(el);
+
+  const btn = document.getElementById('greetBtn');
+  const msg = document.getElementById('message');
+
+  if (btn && msg) {
+    btn.addEventListener('click', function () {
+      const name = prompt('What is your name?', '') || 'friend';
+      const text = `Hello, ${name}! Welcome to Mili's webbie.`;
+      msg.textContent = text;
+      console.log('Greeted:', name);
+    });
+  }
 });
