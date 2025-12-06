@@ -44,3 +44,24 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
+/* Greet button and message styles */
+#greetBtn {
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#greetBtn:hover {
+  background: #005bb5;
+}
+
+#message {
+  margin-top: 12px;
+  font-weight: 700;
+  color: #222;
+}

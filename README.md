@@ -28,4 +28,10 @@ python -m http.server 8000
 # then open http://localhost:8000 in your browser
 ```
 
+VS Code users
+- You can run the included VS Code task to start the same server: open the Command Palette (F1) → "Tasks: Run Task" → choose "Serve: Python HTTP (8000)".
+
+About the Greet button
+- `index.html` includes a small interactive button (top of main). Click "Greet" to enter your name; the page will display a friendly greeting using `js/main.js`.
+
 If you'd like any further reorganization (move other assets, add a `js/` folder, or initialize a git repo), tell me and I can do it.
